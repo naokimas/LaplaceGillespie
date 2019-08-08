@@ -44,12 +44,8 @@ using namespace std;
    and
    init_genrand(time(NULL)) should be replaced by, e.g., srand(time(NULL)) */
 
-#include "gamma.c"
-/* gamma.c is necessary for using function rgamma(,) to generate gamma variates
-   Save the code avilable at
-   http://www.know-all.net/articles/view/56
-   as gamma.c and delete the main() block.
-   Note: gamma.c requires mt19937ar.c */
+#include "gamma_marsaglia_tsang.cc"
+/* Generate gamma distributed random variables using the Marsaglia-Tsang algorithm. It requires mt19937ar.c */
 
 int infrom_mat(int *nE, int *E, char *filename);
 // read network data in which each row represents a link
